@@ -1,0 +1,3 @@
+[submodule "libgraph"]
+	path = libgraph
+	url = https://github.com/cpieri/Libgraph.git
