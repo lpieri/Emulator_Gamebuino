@@ -6,7 +6,7 @@
 #    By: delay <cpieri@student.42.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:05:46 by delay             #+#    #+#              #
-#    Updated: 2019/01/02 13:26:07 by delay            ###   ########.fr        #
+#    Updated: 2019/01/02 23:48:45 by delay            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,14 +30,13 @@ SDL_LOCAL_FLAGS = -framework SDL2 -F $(FW_PATH) -framework SDL2_image -framework
 
 CPPFLAGS=	-Iincludes
 
-FLAGSFT	=	-L./libft -lft -L./libgraph -lgraph
+FLAGSFT	=	 -L./libgraph -lgraph
 
 SRC_PATH=	srcs
 
 OBJ_PATH=	obj
 
 DEPS =		Makefile			\
-			libft/libft.a		\
 			libgraph/libgraph.a	
 
 SRC_NAME= 	main.cpp	\
@@ -59,9 +58,9 @@ CYAN = \033[36m
 
 .PHONY:	all clean fclean re echo norm
 
-all:		LFT LGRAPH $(NAME)
+all:		 LGRAPH $(NAME)
 
-$(NAME):	libft echo $(OBJ)
+$(NAME):	 echo $(OBJ)
 			@if [ -d "/Library/Frameworks/SDL2.framework" ]; then \
 			$(CC) $(CFLAGS) $(FLAGSFT) -o $(NAME) $(OBJ) $(CPPFLAGS) $(SDL_LOCAL_FLAGS); \
 			else \
@@ -83,15 +82,12 @@ $(OBJ_PATH)/%.o: $(SRC_PATH)/%.cpp $(DEPS)
 
 clean:
 			@echo "$(YELLOW)Cleaning...$(NONE)"
-			@make clean -C ./libft/
 			@make clean -C ./libgraph/
 			@/bin/rm -f $(OBJ)
 			@rmdir $(OBJ_PATH) 2> /dev/null || true
 			@/bin/rm -rf $(PATH_SDL)
 
 fclean:		clean
-			@make fclean -C ./libft/
-			@echo "$(RED)Libft.a deleted$(NONE)"
 			@make fclean -C ./libgraph/
 			@echo "$(RED)Libgraph.a deleted$(NONE)"
 			@/bin/rm -f $(NAME)
@@ -103,10 +99,6 @@ norm:		clean
 				| grep -B 1 '^Error' 2> /dev/null || echo '$(GREEN)Norme OK !$(NONE)';
 
 re:			fclean all
-
-LFT:
-		@make -C ./libft/;
-		@echo "\n$(GREEN)Libft ready!$(NONE)";
 
 LGRAPH:
 		@make -C ./libgraph/;
