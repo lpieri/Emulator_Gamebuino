@@ -6,21 +6,20 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 14:07:12 by delay             #+#    #+#             */
-/*   Updated: 2019/01/02 01:06:25 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/02 01:29:33 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "emulate.hpp"
 
-void	printing(Window * win, Bloc * b, Button * d)
+void	printing(Window * win, Bloc * b)
 {
 	win->clear_color(0x002833);
 	b->print(win);
-	d->print(win);
 	win->print();
 }
 
-void	event(Window win, Bloc * b, Button * d)
+void	event(Window win, Bloc * b)
 {
 	SDL_Event	event;
 
@@ -35,9 +34,8 @@ void	event(Window win, Bloc * b, Button * d)
 			{
 				win.change_size();
 				b->recalc_position(win.get_size());
-				d->recalc_position(b->get_position());
 			}
-			printing(&win, b, d);
+			printing(&win, b);
 		}
 	}
 }
@@ -59,8 +57,8 @@ int		main(void)
 	d = new Button(b->get_position(), c2, Vector4d(10, 90, 1, 5), HORIZONTAL_CENTER);
 	b->init_nb_childrens(1);
 	b->new_children(d, sizeof(d), BUTTON);
-	printing(&win, b, d);
-	event(win, b, d);
+	printing(&win, b);
+	event(win, b);
 	SDL_Quit();
 	return (0);
 }
