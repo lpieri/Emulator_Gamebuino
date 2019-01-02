@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   emulate.hpp                                        :+:      :+:    :+:   */
+/*   game.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/19 15:41:34 by delay             #+#    #+#             */
-/*   Updated: 2019/01/02 13:33:45 by delay            ###   ########.fr       */
+/*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
+/*   Updated: 2019/01/02 13:31:54 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef __EMULATE_HPP__
-# define __EMULATE_HPP__
+#include <iostream>
 
-# include "../libgraph/include/libgraph.hpp"
+void	setup() {
+}
 
-# define WIDTH				800
-# define HEIGHT				640
-# define GAMEBUINO_WIDTH	80
-# define GAMEBUINO_HEIGHT	64
-
-void	loop();
-void	setup();
-
-#endif
+void	loop() {
+}

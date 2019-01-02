@@ -6,7 +6,7 @@
 #    By: delay <cpieri@student.42.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:05:46 by delay             #+#    #+#              #
-#    Updated: 2018/12/31 19:37:01 by delay            ###   ########.fr        #
+#    Updated: 2019/01/02 13:26:07 by delay            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ DEPS =		Makefile			\
 			libgraph/libgraph.a	
 
 SRC_NAME= 	main.cpp	\
+			game.cpp
 			
 OBJ_NAME=	$(SRC_NAME:.cpp=.o)
 
