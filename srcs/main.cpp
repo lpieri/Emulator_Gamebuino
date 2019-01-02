@@ -6,27 +6,26 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 14:07:12 by delay             #+#    #+#             */
-/*   Updated: 2019/01/01 21:43:09 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/02 01:06:25 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "emulate.hpp"
 
-void	printing(Window * win, Bloc * b)
+void	printing(Window * win, Bloc * b, Button * d)
 {
-	//(void)b;
-	win->clear();
+	win->clear_color(0x002833);
 	b->print(win);
+	d->print(win);
 	win->print();
 }
 
-void	event(Window win, Bloc * b)
+void	event(Window win, Bloc * b, Button * d)
 {
 	SDL_Event	event;
 
 	while (win.get_loop())
 	{
-		printing(&win, b);
 		SDL_WaitEvent(&event);
 		if (event.type == SDL_QUIT)
 			win.set_loop(0);
@@ -36,8 +35,9 @@ void	event(Window win, Bloc * b)
 			{
 				win.change_size();
 				b->recalc_position(win.get_size());
+				d->recalc_position(b->get_position());
 			}
-			//printing(win, b);
+			printing(&win, b, d);
 		}
 	}
 }
@@ -46,15 +46,21 @@ int		main(void)
 {
 	Window	win;
 	Color	c;
+	Color	c2;
 	Bloc *	b;
+	Button * d;
 
-	c.int_to_color(0xffffff);
+	c.int_to_color(0x078877);
+	c2.int_to_color(0xccddaa);
 	if (SDL_Init(SDL_INIT_VIDEO) != 0)
 		return (-1);
 	win.create("emulate", 500, 500);
-	b = new Bloc(win.get_size(), Vector4d(90, 10, 5, 5), c, HORIZONTAL_CENTER);
-	printing(&win, b);
-	event(win, b);
+	b = new Bloc(win.get_size(), Vector4d(90, 5, 5, 2), c, HORIZONTAL_CENTER);
+	d = new Button(b->get_position(), c2, Vector4d(10, 90, 1, 5), HORIZONTAL_CENTER);
+	b->init_nb_childrens(1);
+	b->new_children(d, sizeof(d), BUTTON);
+	printing(&win, b, d);
+	event(win, b, d);
 	SDL_Quit();
 	return (0);
 }
