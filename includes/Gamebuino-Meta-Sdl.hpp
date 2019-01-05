@@ -1,21 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   game.cpp                                           :+:      :+:    :+:   */
+/*   Gamebuino-Meta-Sdl.hpp                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/05 21:01:45 by delay            ###   ########.fr       */
+/*   Created: 2019/01/05 19:59:31 by delay             #+#    #+#             */
+/*   Updated: 2019/01/05 21:00:02 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "emulate.hpp"
-#include <iostream>
+#ifndef	__GAMEBUINO_META_SDL_HPP__
+# define __GAMEBUINO_META_SDL_HPP__
 
-void	setup() {
-}
+# include "emulate.hpp"
 
-void	loop() {
-	while (!gb.update());
-}
+#endif
