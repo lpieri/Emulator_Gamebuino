@@ -6,14 +6,17 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/12 14:07:12 by delay             #+#    #+#             */
-/*   Updated: 2019/01/05 21:06:52 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/07 20:25:11 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "emulate.hpp"
 
+GamebuinoSdl	gb;
+
 int		main(void)
 {
+
 	setup();
 	while (gb.display.get_loop())
 	{
