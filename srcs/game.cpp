@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/08 11:28:44 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/09 14:22:52 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,10 @@ void	setup() {
 
 void	loop() {
 	while (!gb.update());
-	gb.display.clear();
+	gb.display.clear(BLUE);
+
+	if (gb.buttons.pressed(BUTTON_LEFT))
+		std::cout << "Button pressed is left or a" << std::endl;
+	if (gb.buttons.pressed(BUTTON_RIGHT))
+		std::cout << "Button pressed is right or d" << std::endl;
 }
