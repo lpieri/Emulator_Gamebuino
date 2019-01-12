@@ -1,3 +1,4 @@
 # Emulator_Gamebuino
 
-En dev...
+gb.display in progress
+gb.buttons finish
