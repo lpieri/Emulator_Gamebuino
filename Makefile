@@ -6,7 +6,7 @@
 #    By: delay <cpieri@student.42.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:05:46 by delay             #+#    #+#              #
-#    Updated: 2019/01/02 23:48:45 by delay            ###   ########.fr        #
+#    Updated: 2019/01/14 04:26:23 by cpieri      ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,8 +39,9 @@ OBJ_PATH=	obj
 DEPS =		Makefile			\
 			libgraph/libgraph.a	
 
-SRC_NAME= 	main.cpp	\
-			game.cpp
+SRC_NAME= 	main.cpp			\
+			game.cpp			\
+			$(patsubst srcs/game_files/%.cpp, game_files/%.cpp, $(wildcard srcs/game_files/*.cpp))
 			
 OBJ_NAME=	$(SRC_NAME:.cpp=.o)
 
@@ -61,6 +62,7 @@ CYAN = \033[36m
 all:		 LGRAPH $(NAME)
 
 $(NAME):	 echo $(OBJ)
+			@ echo $(OBJ)
 			@if [ -d "/Library/Frameworks/SDL2.framework" ]; then \
 			$(CC) $(CFLAGS) $(FLAGSFT) -o $(NAME) $(OBJ) $(CPPFLAGS) $(SDL_LOCAL_FLAGS); \
 			else \
@@ -73,6 +75,7 @@ echo:
 
 $(OBJ_PATH)/%.o: $(SRC_PATH)/%.cpp $(DEPS)
 			@mkdir $(OBJ_PATH) 2> /dev/null || true
+			@mkdir $(OBJ_PATH)/game_files 2> /dev/null || true
 			@if [ -d "/Library/Frameworks/SDL2.framework" ]; then \
 			$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -I/Library/Frameworks/SDL2.framework/Headers/ -I $(IMG_PATH)/Headers -I $(TTF_PATH)/Headers -o $@; \
 			else \
