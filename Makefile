@@ -6,7 +6,7 @@
 #    By: delay <cpieri@student.42.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:05:46 by delay             #+#    #+#              #
-#    Updated: 2019/01/14 04:26:23 by cpieri      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/01/14 06:16:50 by cpieri      ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,7 +62,6 @@ CYAN = \033[36m
 all:		 LGRAPH $(NAME)
 
 $(NAME):	 echo $(OBJ)
-			@ echo $(OBJ)
 			@if [ -d "/Library/Frameworks/SDL2.framework" ]; then \
 			$(CC) $(CFLAGS) $(FLAGSFT) -o $(NAME) $(OBJ) $(CPPFLAGS) $(SDL_LOCAL_FLAGS); \
 			else \
