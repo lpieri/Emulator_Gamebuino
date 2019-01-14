@@ -6,15 +6,15 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 15:11:34 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 05:01:46 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:13:08 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "game_includes/map.hpp"
 #include "game_includes/level.hpp"
-/*
-Image earth_2 = Image(earth_2Data);
+
+/*Image earth_2 = Image(earth_2Data);
 Image badImage = Image(badData);
 Image DirtI = Image(DirtData);
 Image flagImage = Image(flagData);*/

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 11:28:54 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 04:19:45 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:28:15 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -52,6 +52,8 @@ class Character
 		bool&			getIsMoveBack(void);
 
 		void			setWorldPosX(int x);
+		void			setPosX(int x);
+		void			setPosY(int y);
 };
 
 #endif

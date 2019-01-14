@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/24 16:51:56 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 04:19:49 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:29:50 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -61,5 +61,17 @@ bool&	Character::getIsFall(void)
 void	Character::setWorldPosX(int x)
 {
 	this->_world_pos.set_value(x, this->_world_pos.get_y());
+	return ;
+}
+
+void	Character::setPosX(int x)
+{
+	this->_pos.set_value(x, this->_pos.get_y());
+	return ;
+}
+
+void	Character::setPosY(int y)
+{
+	this->_pos.set_value(this->_pos.get_x(), y);
 	return ;
 }

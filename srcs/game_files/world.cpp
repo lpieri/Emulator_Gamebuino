@@ -6,18 +6,19 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 02:46:13 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:33:19 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 # include "game_includes/world.hpp"
 # include "game_includes/level.hpp"
-
+/*
 Image skyImage = Image(skyData);
 Image le101 = Image(schoolData);
-
-World::World(Character* character, Map* maps) : _character(character), _maps(maps), _gravity(1)
+*/
+World::World(Character* character, Map* maps) : _gravity(1), _character(character),
+	_maps(maps)
 {
 	return ;
 }
@@ -29,7 +30,7 @@ World::~World(void)
 
 void	World::_set_gravity(void)
 {
-	this->_character->get_posY() += this->_gravity;
+	this->_character->setPosY(this->_character->get_posY() + this->_gravity);
 	return ;
 }
 
@@ -70,14 +71,14 @@ void	World::add_physical(void)
 
 void	World::print_sky(void) const
 {
-	gb.display.drawImage(0, 0, skyImage, WIDTH, HEIGHT);
+	//gb.display.drawImage(0, 0, skyImage, WIDTH, HEIGHT);
 }
 
 void	World::restart_game(void)
 {
 	this->_maps->getStarterMap() = 0;
-	this->_character->get_posX() = 0;
-	this->_character->get_posY() = 0;
+	this->_character->setPosX(0);
+	this->_character->setPosY(0);
 	this->_character->setWorldPosX(0);
 	this->_character->getIsFall() = true;
 	this->_character->getIsRun() = true;
@@ -86,18 +87,19 @@ void	World::restart_game(void)
 
 void	World::_the_end(char const * text)
 {
-	size_t length = sizeof(text) / sizeof(*text);
-	uint8_t	w;
-	uint8_t h;
+	//size_t length = sizeof(text) / sizeof(*text);
+	//uint8_t	w;
+	//uint8_t h;
 	bool	iloop;
 
 	iloop = true;
-	gb.display.setFontSize(1);
-	w = gb.display.getFontWidth();
-	h = gb.display.getFontHeight();
+	(void)text;
+	//gb.display.setFontSize(1);
+	//w = gb.display.getFontWidth();
+	//h = gb.display.getFontHeight();
 	gb.display.clear();
-	gb.display.setCursor(.5 * (WIDTH - (w * length)), .5 * (HEIGHT - h));
-	gb.display.print(text);
+	//gb.display.setCursor(.5 * (WIDTH - (w * length)), .5 * (HEIGHT - h));
+	//gb.display.print(text);
 	while (iloop)
 	{
 		while (!gb.update()){
@@ -144,7 +146,7 @@ void	World::start_game(void)
 	centerX = (WIDTH / 2) - (S_LE101 / 2);
 	centerY = (HEIGHT / 2) - (S_LE101 / 2);
 	gb.display.clear(WHITE);
-	gb.display.drawImage(centerX, centerY, le101, S_LE101, S_LE101);
+	//gb.display.drawImage(centerX, centerY, le101, S_LE101, S_LE101);
 	while (iloop)
 	{
 		while (!gb.update()){

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:37:59 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 04:59:03 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:20:18 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,12 +16,11 @@
 
 # include "character.hpp"
 # include "macro.hpp"
-# include "img.hpp"
+//# include "img.hpp"
 
 class Unicorn : public Character
 {
 	private:
-		int const		_damages;
 		int const		_speed;
 
 	public:

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 04:58:46 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 05:26:42 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,14 +16,13 @@
 
 # include "map.hpp"
 # include "character.hpp"
-# include "img.hpp"
+//# include "img.hpp"
 # include "Gamebuino-Meta-Sdl.hpp"
 
 class World
 {
 	private:
 		int const	_gravity;
-		int			_nb_bad;
 		Character *	_character;
 		Map * 		_maps;
 
