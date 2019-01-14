@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 12:45:53 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 05:26:42 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 06:20:05 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -16,7 +16,6 @@
 
 # include "map.hpp"
 # include "character.hpp"
-//# include "img.hpp"
 # include "Gamebuino-Meta-Sdl.hpp"
 
 class World

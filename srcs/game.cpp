@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/14 04:44:03 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/14 06:18:06 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ Character*	pedro = new Unicorn();
 World*		earth = new World(pedro, maps);
 
 void setup() {
-	earth->start_game();
+	//earth->start_game();
 }
 
 void loop() {
