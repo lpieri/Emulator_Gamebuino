@@ -1,17 +1,18 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   character_utils.cpp                              .::    .:/ .      .::   */
+/*   character_utils.cpp                                :+:      :+:    :+:   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/24 16:51:56 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/14 05:29:50 by cpieri      ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/15 21:53:20 by delay            ###   ########.fr       */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "game_includes/character.hpp"
+#include <iostream>
 
 int&	Character::getLife(void)
 {
@@ -67,6 +68,7 @@ void	Character::setWorldPosX(int x)
 void	Character::setPosX(int x)
 {
 	this->_pos.set_value(x, this->_pos.get_y());
+	std::cout << this->_pos.get_x() << std::endl;
 	return ;
 }
 
