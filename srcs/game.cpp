@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/21 21:37:43 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/21 22:19:43 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,29 +15,26 @@
 #include "game_includes/game.hpp"
 
 Map*		maps = new Map();
-Character*	pedro = new Unicorn();
-World*		earth = new World(pedro, maps);
+/*
+**	Rip stan lee ??
+*/
+//World*		earth = new World(/*??*/, maps);
 
 void setup() {
 	gb.begin();
-	earth->start_game();
+	//earth->start_game();
 }
 
 void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
-		pedro->run(maps->getStarterMap());
-	if (gb.buttons.repeat(BUTTON_LEFT, 1))
-		pedro->moveBack(maps->getStarterMap());
-	if (gb.buttons.pressed(BUTTON_A))
-		pedro->jump();
-	if (gb.buttons.pressed(BUTTON_MENU))
-		earth->restart_game();
-	earth->print_sky();
+	/*
+	**Events ??
+	** if (gb.buttons.pressed(BUTTON_MENU))
+	**	[redemarer le jeu]
+	** Affichage ??
+	*/
+
 	maps->print();
-	pedro->print();
-	earth->add_physical();
-	//earth->check_end();
 }
