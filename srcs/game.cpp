@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/15 21:51:53 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/21 14:56:59 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ Character*	pedro = new Unicorn();
 World*		earth = new World(pedro, maps);
 
 void setup() {
+	gb.begin();
 	earth->start_game();
 }
 
