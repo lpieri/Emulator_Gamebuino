@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/02 13:19:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/21 14:56:59 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/21 21:37:43 by delay            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,17 +27,10 @@ void loop() {
 	while (!gb.update());
 	gb.display.clear();
 
-	std::cout << maps->getStarterMap() << std::endl;
 	if (gb.buttons.repeat(BUTTON_RIGHT, 1))
-	{
-		std::cout << "run" << std::endl;
 		pedro->run(maps->getStarterMap());
-	}
 	if (gb.buttons.repeat(BUTTON_LEFT, 1))
-	{
-		std::cout << "moveBack" << std::endl;
 		pedro->moveBack(maps->getStarterMap());
-	}
 	if (gb.buttons.pressed(BUTTON_A))
 		pedro->jump();
 	if (gb.buttons.pressed(BUTTON_MENU))
