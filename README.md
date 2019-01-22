@@ -6,7 +6,7 @@ Après le dev de mon jeu sur la console, je me suis dis qu'il manquait un outils
 
 C'est pour ça que je me suis lancé dans une longue et aventureuse mission, celle de devoir crée un éditeur unique pour la Gamebuino, où il suffirait de devoir executer la commande make dans un terminale pour que le jeu se lance sur l'ordi sans devoir modifier le code du .ino.
 
-Pour l'instant la moitié de la lib Gamebuino-Meta est réalisée, (avec quelques class supplémentaires comme des class qui permette de faire du Vectoriel), je suis en train de créé la class Image.
+~~Pour l'instant la moitié de la lib Gamebuino-Meta est réalisée, (avec quelques class supplémentaires comme des class qui permette de faire du Vectoriel), je suis en train de créé la class Image.~~
 
 Les classes principales de Gamebuino (display, image, gamebuino) sont fonctionnels. (Je n'aurais plus le temps de la maintenir, je vous donnerais accès au repo si vous maintenez la lib)
 
@@ -16,7 +16,7 @@ Pour l'instant pas d'éditeur fonctionnel mais si vous voulez retrouver la struc
 
 Pour compiler votre code, sauvegardez le fichier `game.cpp` et lancez la commande `make` à la racine du repo.
 
-Un fois la compilation effectué vous pouvez lancer votre jeu en executant le binaire nommé emulate à la racine du repo.
+~~Un fois la compilation effectué vous pouvez lancer votre jeu en executant le binaire nommé emulate à la racine du repo.~~
 
 La commande `make` lance directement le jeu (la compilation se fait avec les flags `-Wall -Wextra -Werror` ces flags transformes vos Warning en Erreur de compilation)
 
