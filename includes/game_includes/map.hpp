@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 14:56:39 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/21 23:09:03 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:37:52 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 # define __MAP_HPP__
 
 # include "vector.hpp"
-# include "macro.hpp"
+# include "desktop_macro.hpp"
 # include "image.hpp"
 # include "Gamebuino-Meta-Sdl.hpp"
 

@@ -6,11 +6,11 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 22:54:58 by delay             #+#    #+#             */
-/*   Updated: 2019/01/21 23:06:50 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:26:44 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "game_includes/vector2d.hpp"
+#include "game_includes/vector.hpp"
 
 Vector::Vector(int x, int y) : _x(x), _y(y)
 {

@@ -6,13 +6,13 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:20:56 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/21 22:57:30 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:23:02 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#ifndef __IMAGE_HPP__
-# define __IMAGE_HPP__
+#ifndef __GAME_IMAGE_HPP__
+# define __GAME_IMAGE_HPP__
 
 # include "Gamebuino-Meta-Sdl.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/21 12:37:59 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2018/10/25 11:29:31 by delay       ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/01/22 13:37:23 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 # define __UNICORN_HPP__
 
 # include "character.hpp"
-# include "macro.hpp"
+# include "desktop_macro.hpp"
 # include "image.hpp"
 # include "workshop.hpp"
 

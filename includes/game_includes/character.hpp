@@ -6,7 +6,7 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 23:13:19 by delay             #+#    #+#             */
-/*   Updated: 2019/01/21 23:13:22 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:37:33 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "Gamebuino-Meta-Sdl.hpp"
 # include "vector.hpp"
-# include "macro.hpp"
+# include "desktop_macro.hpp"
 
 class Character
 {

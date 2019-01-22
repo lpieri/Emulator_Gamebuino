@@ -6,14 +6,14 @@
 /*   By: delay <cpieri@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/21 23:03:02 by delay             #+#    #+#             */
-/*   Updated: 2019/01/21 23:09:26 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:37:28 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef	__BAD_HPP__
 # define __BAD_HPP__
 
-# include "macro.hpp"
+# include "desktop_macro.hpp"
 # include "image.hpp"
 # include "vector.hpp"
 

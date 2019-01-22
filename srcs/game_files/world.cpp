@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/09/29 14:10:16 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/21 22:56:08 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 15:12:07 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -17,7 +17,8 @@
 Image skyImage = Image("./assets/sky_macos.png");
 Image le101 = Image("./assets/le_101_gb.png");
 
-World::World(Character* character, Map* maps) : _character(character), _maps(maps), _gravity(1)
+World::World(Character* character, Map* maps) : _gravity(1),
+	_character(character), _maps(maps)
 {
 	return ;
 }
@@ -64,7 +65,7 @@ void	World::_check_colision(void)
 
 void	World::print(void) const
 {
-	gb.display.drawImage(0, 0, skyImage, WIDTH, HEIGHT);
+	gb.display.drawImage(0, 0, skyImage, MACOS_WIDTH, MACOS_HEIGHT);
 }
 
 void	World::restart_game(void)
@@ -80,7 +81,8 @@ void	World::restart_game(void)
 
 void	World::_the_end(char const * text)
 {
-	size_t length = sizeof(text) / sizeof(*text);
+	(void)text;
+	/*size_t length = sizeof(text) / sizeof(*text);
 	uint8_t	w;
 	uint8_t h;
 	bool	iloop;
@@ -100,7 +102,7 @@ void	World::_the_end(char const * text)
 		}
 	}
 	this->_character->getLife() = ALL_LIFE;
-	this->restart_game();
+	this->restart_game();*/
 }
 
 void	World::check_end(void)

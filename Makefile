@@ -6,11 +6,11 @@
 #    By: delay <cpieri@student.42.fr>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/12/12 15:05:46 by delay             #+#    #+#              #
-#    Updated: 2019/01/14 06:16:50 by cpieri      ###    #+. /#+    ###.fr      #
+#    Updated: 2019/01/22 15:50:00 by cpieri      ###    #+. /#+    ###.fr      #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	=	emulate
+NAME	=	game
 
 CC		=	g++
 
@@ -68,6 +68,7 @@ $(NAME):	 echo $(OBJ)
 			$(CC) $(CFLAGS) $(FLAGSFT) -o $(NAME) $(OBJ) $(CPPFLAGS) $(SDL_FLAGS); \
 			fi
 			@echo "\n$(GREEN)$(NAME) ready!$(NONE)"
+			@./$(NAME)
 
 echo:
 			@ echo -n Getting $(NAME) ready
@@ -86,6 +87,7 @@ clean:
 			@echo "$(YELLOW)Cleaning...$(NONE)"
 			@make clean -C ./libgraph/
 			@/bin/rm -f $(OBJ)
+			@rmdir $(OBJ_PATH)/game_files 2> /dev/null || true
 			@rmdir $(OBJ_PATH) 2> /dev/null || true
 			@/bin/rm -rf $(PATH_SDL)
 

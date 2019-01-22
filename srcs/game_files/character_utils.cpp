@@ -6,7 +6,7 @@
 /*   By: delay <clement@le-101.fr>                  +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/10/24 16:51:56 by delay        #+#   ##    ##    #+#       */
-/*   Updated: 2019/01/21 22:53:30 by delay            ###   ########.fr       */
+/*   Updated: 2019/01/22 13:22:21 by cpieri      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -60,6 +60,7 @@ bool&	Character::getIsFall(void)
 
 void	Character::setWorldPosX(int x)
 {
+	(void)x;
 	this->_world_pos.getX() = 0;
 	return ;
 }
