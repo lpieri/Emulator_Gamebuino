@@ -2,7 +2,7 @@
 
 Bonjour,
 
-Après le dev de mon jeu sur la console, je me suis dis qu'il manquait un outils pour tester rapidement son jeu sans devoir télverser son code sur la console.
+Après le dev de mon jeu sur la console, je me suis dis qu'il manquait un outils pour tester rapidement son jeu sans devoir téleverser son code sur la console.
 
 C'est pour ça que je me suis lancé dans une longue et aventureuse mission, celle de devoir crée un éditeur unique pour la Gamebuino, où il suffirait de devoir executer la commande make dans un terminale pour que le jeu se lance sur l'ordi sans devoir modifier le code du .ino.
 
