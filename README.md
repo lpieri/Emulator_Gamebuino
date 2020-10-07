@@ -35,6 +35,7 @@ Si votre gestion de la physique est liée à des pixels il se pourrait que ça p
 ## Contributeurs
 
 [Louise Pieri](https://github.com/lpieri)
+
 [Arthur Lutz](https://github.com/arthurlutz)
 
 ## Codez bien ;) 
