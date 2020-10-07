@@ -1,4 +1,4 @@
-# Emulator_Gamebuino
+# Emulator 4 Gamebuino (MacOS)
 
 Bonjour,
 
@@ -34,6 +34,7 @@ Si votre gestion de la physique est liée à des pixels il se pourrait que ça p
 
 ## Contributeurs
 
-[Louise Pieri](github.com/lpieri)
+[Louise Pieri](https://github.com/lpieri)
+[Arthur Lutz](https://github.com/arthurlutz)
 
 ## Codez bien ;) 
